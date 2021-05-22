@@ -55,12 +55,52 @@ function renderLicenseSection() {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  license = data.licenseType;
-  console.log(data)
-  console.log("license link", renderLicenseSection())
-  return `# ${data.projectName}
+function generateMarkdown(answers) {
+  license = answers.licenseType;
+  licenseBadge = renderLicenseSection();
 
+    return readmeMD = `# ${answers.projectName}
+
+## Description 
+ 
+---
+${answers.projectDescription}
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [License](#license)
+
+## Installation
+
+*Steps required to install project and how to get the development environment running:*
+
+${answers.commandInstall}
+---
+## Usage 
+
+*Instructions and examples for use:*
+
+${answers.aboutRepo}
+---
+## Tests
+
+*Tests for application and how to run them:*
+
+${answers.commandTest}
+---
+## License
+
+${licenseBadge}
+---
+
+## Questions?
+
+For any questions, please contact me with the information below:
+
+## [<img src="https://image.flaticon.com/icons/png/512/726/726623.png" width="40" >](mailto:${answers.eMail})      [<img src="https://image.flaticon.com/icons/png/512/270/270798.png" width="40" >](https://github.com/${answers.gitHubName})
 `;
 }
 
