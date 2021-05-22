@@ -13,23 +13,20 @@ const questions = [{message: "\033[32mWhat is your GitHub username? -- : ", name
                             return false 
                             }},
                     {message:"\033[32mWhat is your Email address? -- : ", name: 'eMail', type: 'input',validate: function (eMail) {
-                        
                         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(eMail)) {
                             return true;
                         } else {
                             console.log("\033[31m  <-- Please enter a valid email")
-                           
                             return false;
                         } },
                     },
                     {message:"\033[32mWhat is your Project's name? -- : ", name: 'projectName', type: 'input',
                     validate: function (projectName) {
-                        if (projectName === ""){ 
-                                console.log("\033[31m  <-- Please enter project name") 
-                                return false
-                        }
-                            else
-                                return true
+                        if (valid.test(projectName)) { 
+                            return true   
+                        } else
+                            console.log("\033[31m  <-- Please enter valid project name") 
+                            return false 
                             }},
                     {message:"\033[32mShort description of your project -- : ",name: 'projectDescription', type: 'input'},
                     {message:"\033[32mWhat type of license your project have? -- : ", choices: ['MIT','APACHE 2.0','GPL 3.0','BSD 3','None'], name: 'licenseType', type: 'list'},
@@ -56,6 +53,5 @@ async function init() {
         console.log("\033[31m" + err)
     }
 }
-
 // Function call to initialize app
  init();
