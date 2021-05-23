@@ -1,9 +1,9 @@
-# dfg fgfdsg 
+# .
 
 ## Description 
  
 ---
-dsf
+dfs
 
 ## Table of Contents
 * [Installation](#installation)
@@ -16,19 +16,19 @@ dsf
 
 *Steps required to install project and how to get the development environment running:*
 
-npm install
+sdf
 ---
 ## Usage 
 
 *Instructions and examples for use:*
 
-
+sdf
 ---
 ## Tests
 
 *Tests for application and how to run them:*
 
-Console.log
+sdf
 ---
 ## License
 
@@ -39,4 +39,4 @@ Console.log
 
 For any questions, please contact me with the information below:
 
-## [<img src="https://image.flaticon.com/icons/png/512/726/726623.png" width="40" >](mailto:sdf@fgds.fgf)      [<img src="https://image.flaticon.com/icons/png/512/270/270798.png" width="40" >](https://github.com/sdf_dsf)
+## [<img src="https://image.flaticon.com/icons/png/512/726/726623.png" width="40" >](mailto:zoneam@gmail.com)      [<img src="https://image.flaticon.com/icons/png/512/270/270798.png" width="40" >](https://github.com/df)
