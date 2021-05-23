@@ -16,6 +16,12 @@ const questions = [{
             } else
                 console.log("\033[31m  <-- Please enter valid GitHub username")
             return false
+        },
+        filter: (gitHubName) => {
+            if (!(/^[0-9a-zA-Z_]+$/).test(gitHubName)) {
+                return gitHubName = ""
+            } else
+                return gitHubName
         }
     },
     {
@@ -31,7 +37,7 @@ const questions = [{
             }
         },
         filter: (eMail) => {
-            if (!validate(eMail)) {
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(eMail)) {
                 return eMail = ""
             } else
                 return eMail
@@ -107,13 +113,6 @@ const questions = [{
         }
     },
 ];
-//Validation
-function validate(eMail) {
-    if ((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(eMail)) {
-        return true
-    } else
-        return false
-}
 
 // TODO: Create a function to write README file
 async function writeToFile(readmeMD) {
